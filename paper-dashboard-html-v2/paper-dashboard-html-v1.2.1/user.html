@@ -205,14 +205,14 @@
             <div class="form-group">
              <label>Attach Bill</label>
 <div class="col-md-12">
-                                   <input type="file" accept="image/*" onchange="loadFile(event)">
-<img id="output" style="height: 300px;width: 50%;" />
-<script>
+                                   <input type="file" accept="image/*" onchange="loadFile(event,c)">
+<img id="output1" style="height: 300px;width: 50%;" />
+<!--script>
  var loadFile = function(event) {
    var output = document.getElementById('output');
    output.src = URL.createObjectURL(event.target.files[0]);
  };
-</script>
+</script-->
      </div>  
                                     </div>
 <button class="btn waves-effect waves-light" type="button" name="action" id="addElement" onclick="addRow()">ADD
@@ -220,17 +220,19 @@
   </button>
   </div>
   <script>
-
+    c=1;
 //document.getElementById("addElement").onclick = function() {myFunction()};
 
 
 
 function addRow() {
     var div = document.createElement('div');
-
+    c=c+1;
     div.className = 'row';
 
-    div.innerHTML =
+    div.innerHTML 
+
+    str=
 
      '<div class="row">\
         <div class="col-md-6">\
@@ -264,9 +266,16 @@ function addRow() {
             <div class="form-group">\
              <label>Attach Bill</label>\
 <div class="col-md-12">\
-                                   <input type="file" accept="image/*" onchange="loadFile(event)">\
-<img id="output" style="height: 300px;width: 50%;" />\
-     </div>'
+                                   <input type="file" accept="image/*" onchange="loadFile(event,2)">\
+<img id="output'
+str=str+c+'"';
+str=str+' style="height: 300px;width: 50%;" />\
+     </div>\
+     </div>\
+     </div>';
+
+console.log(str);
+     div.innerHTML = str;
     document.getElementById('expense').appendChild(div);
 }
 </script>
@@ -312,7 +321,13 @@ function addRow() {
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-    
+    <script>
+ var loadFile = function(event,cnt) {
+    console.log('output'+cnt)
+   var output = document.getElementById('output'+cnt);
+   output.src = URL.createObjectURL(event.target.files[0]);
+ };
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <form id="form1" runat="server"> <input type='file' id="imgInp" /> <img id="blah" src="#" alt="your image" /> </form>
