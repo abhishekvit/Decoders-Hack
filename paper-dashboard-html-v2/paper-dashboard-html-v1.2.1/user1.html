@@ -167,8 +167,9 @@
                             </div>
                             <div class="content">
                                 
-
-                                <form id="expense">
+                                
+                                <form id="expense" class="collapsible">
+                                    <div class="collapsible-body">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -249,7 +250,7 @@ function addRow() {
     document.getElementById('expense').appendChild(div);
 }
 </script>
-
+</div>
 
     </form>
                             </div>
@@ -294,5 +295,17 @@ function addRow() {
     
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <form id="form1" runat="server"> <input type='file' id="imgInp" /> <img id="blah" src="#" alt="your image" /> </form>
+<script >
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  
+
+
+</script> 
 </html>
