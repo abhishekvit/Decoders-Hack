@@ -246,6 +246,20 @@ function addRow() {
                                                 <input type="text" class="form-control border-input" placeholder="Ola">\
                                             </div>\
                                         </div>\
+                                    </div>\
+                                    <div class="row">\
+                                        <div class="col-md-6">\
+                                            <div class="form-group">\
+                                                <label>Invoice Number</label>\
+                                                <input type="text" class="form-control border-input" placeholder="CRN1234">\
+                                            </div>\
+                                        </div>\
+                                        <div class="col-md-6">\
+                                            <div class="form-group">\
+                                                <label>Amount</label>\
+                                                <input type="number" class="form-control border-input" placeholder="123">\
+                                            </div>\
+                                        </div>\
                                     </div>'
     document.getElementById('expense').appendChild(div);
 }
@@ -295,17 +309,5 @@ function addRow() {
     
 
 
-<script >
-    
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, options);
-  });
 
-  // Or with jQuery
-
-  
-
-
-</script> 
 </html>

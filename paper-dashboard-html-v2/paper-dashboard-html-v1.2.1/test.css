@@ -1,0 +1,14 @@
+<div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                          <label for="Expense">Expense Type</label>
+                                                <input type="text" class="form-control border-input" placeholder="cab">
+                                            </div>
+                                        </div>\
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Merchant Name</label>
+                                                <input type="text" class="form-control border-input" placeholder="Ola">
+                                            </div>
+                                        </div>
+                                    </div>

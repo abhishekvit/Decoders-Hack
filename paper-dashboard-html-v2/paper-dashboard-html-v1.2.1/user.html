@@ -245,7 +245,28 @@ function addRow() {
                                                 <input type="text" class="form-control border-input" placeholder="Ola">\
                                             </div>\
                                         </div>\
-                                    </div>'
+                                    </div>\
+                                    <div class="row">\
+                                        <div class="col-md-6">\
+                                            <div class="form-group">\
+                                                <label>Invoice Number</label>\
+                                                <input type="text" class="form-control border-input" placeholder="CRN1234">\
+                                            </div>\
+                                        </div>\
+                                        <div class="col-md-6">\
+                                            <div class="form-group">\
+                                                <label>Amount</label>\
+                                                <input type="number" class="form-control border-input" placeholder="123">\
+                                            </div>\
+                                        </div>\
+                                    </div>\
+                                    <div class="row">\
+            <div class="form-group">\
+             <label>Attach Bill</label>\
+<div class="col-md-12">\
+                                   <input type="file" accept="image/*" onchange="loadFile(event)">\
+<img id="output" style="height: 300px;width: 50%;" />\
+     </div>'
     document.getElementById('expense').appendChild(div);
 }
 </script>
